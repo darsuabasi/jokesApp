@@ -19,6 +19,13 @@ const Navbar = () => {
                             </NavLink>
                         </li>
 
+                        <li className="nav-item">
+                            <NavLink className="navlink-style" exact to="/dashboard">
+                                Dashboard
+                            </NavLink>
+                        </li>
+
+                        
                     </ul>
                 </div>
             </div>
