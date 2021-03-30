@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0
+}
+
+.home-main-div {
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    justify-content: flex-end;
+    align-items: baseline;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../../assets/landingPage.png');
+    background-size: cover;
+}
+
+.enterWorldBtn {
+    margin-top: 30%;
+    margin-right: 10%;
+    height: 3rem;
+    width: 350px;
+    border-radius: 1rem;
+    background-color: tan;
+    border: none;
+    box-shadow: 1px 3px 5px 5px #f3645e;
+    cursor: pointer;
+    font-variant: all-small-caps;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.enterWorldBtn:hover {
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+    box-shadow: 1px 3px 5px 5px #8298d5;
+}
+
+@media (max-width: 700px) {
+    home-main-div {
+        justify-content: center !important;
+        align-items: center !important;
+        background-size: contain !important;
+    }
+
+    .enterWorldBtn {
+        margin-top: 75% !important;
+        margin-right: 15% !important;
+    }
+  }
