@@ -39,11 +39,11 @@
 }
 
 @media (max-width: 700px) {
-    home-main-div {
+    /* .home-main-div {
         justify-content: center !important;
         align-items: center !important;
         background-size: contain !important;
-    }
+    } */
 
     .enterWorldBtn {
         margin-top: 75% !important;
