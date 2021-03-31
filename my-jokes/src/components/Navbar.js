@@ -6,9 +6,13 @@ const Navbar = () => {
     return (
         <div className="navbar-main-div">
             <div className="navbar-sub-div">
-                
+                <div class="menu-icon">
+                    <i class="fa fa-bars fa-2x"></i>
+                </div>
                 <div class="navbar-logo">
-                    UEA-DJ
+                    <NavLink className="logo-style"  exact to="/">
+                        UEA-DJ
+                    </NavLink>
                 </div>
 
                 <div className="menu-div">
@@ -25,7 +29,11 @@ const Navbar = () => {
                             </NavLink>
                         </li>
 
-                        
+                        <li className="nav-item">
+                            <NavLink className="navlink-style"  exact to="/dashboard/search-jokes">
+                                Search
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
             </div>
