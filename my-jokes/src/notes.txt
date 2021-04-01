@@ -1,0 +1,31 @@
+React-query
+- no longer have to worry about useEffect or tracking the useState
+- useMutation for making PUT/PATCH requests [anything that needs to be updated]
+- useInfiniteQuery ?? [when fetching data that's infinite (think pinterest with infinite scroll where data goes on "forever")]
+- what to use if you need to track things that react-query may not cover
+- how to manipulate ??
+
+
+1.  lines of code I was able to get rid of in trending gifs component
+
+    const [gifs, setGifs] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+
+    const getGifs = async () => {
+        try {
+            let res = await axios.get(`https://api.giphy.com/v1/gifs/trending?api_key=${APIKEY}&limit=500`);
+            console.log(res);
+            setGifs(res.data.data);
+
+            to search gif
+            let res = await axios.get(`https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=1&q=`);
+
+            for single random gif
+            let res = await axios.get(`https://api.giphy.com/v1/gifs/random?api_key=${APIKEY}`);
+            setGifs(res.data["data"].image_original_url);
+            
+        } catch (err){
+            console.log(err)
+        }
+    }
+    useEffect(getGifs, [])
