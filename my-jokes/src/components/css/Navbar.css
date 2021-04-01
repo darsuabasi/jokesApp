@@ -6,10 +6,21 @@
 .navbar-main-div {
     width: 100%;
     height: 15vh;
-    background-image: url('../../assets/header2.png');
+    background-image: url('../../assets/header4.png');
+    /* background-color: #c1a37f; */
+    /* background-color: tan; */
     background-size: cover;
     background-size: contain;
     background-size: 3%;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-main-div:hover {
+    background-image: url('../../assets/header8.png');
+    /* background-size: cover; */
+    /* background-size: contain; */
+    background-size: 100%;
     justify-content: center;
     align-items: center;
 }
@@ -44,10 +55,9 @@
 }
 
 .menu-div:hover {
-    /* background-color: #000; */
     height: 15vh;
     /* background-color: #e6e3de; */
-    background-color: #f3645e;
+    /* background-color: #f3645e; */
 }
 
 .navbar-main-ul {
@@ -78,7 +88,7 @@
     font-size: 26px;
     font-weight: 600;
     font-variant: all-petite-caps;
-    text-decoration: underline tan;
+    text-decoration: underline #8298d5;
 }
 
 .navlink-style:hover {
