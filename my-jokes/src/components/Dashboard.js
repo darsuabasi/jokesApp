@@ -63,9 +63,6 @@ const Dashboard = ({dadImages}) => {
 
             <div className="dashboard-deck-div">
                 <button className="navigate-btn" onClick={() => history.push(`/dashboard/random-jokes`)}>Want to know a Random Dad Joke?</button>
-                {/* <button className="enterAppBtn" onClick={() => history.push(`/dashboard/slack-random-jokes`)}> Random Joke as Slack Message </button> */}
-                {/* <button className="navigate-btn" onClick={() => history.push(`/dashboard/image-jokes`)}> Image Jokes </button> */}
-                {/* <button className="navigate-btn" onClick={() => history.push(`/dashboard/search-jokes`)}> Search for Jokes </button> */}
             </div>
 
             <div className="cube-main-div"> 
@@ -83,8 +80,8 @@ const Dashboard = ({dadImages}) => {
                         })} */}
 
                         <div class="swiper-slide"> <img className="style-dad-gif" src={dadgif3}/> </div>
-                        <div class="swiper-slide"> <img className="style-dad-gif" src={dadgif1}/> </div>
                         <div class="swiper-slide"> <img className="style-dad-gif" src={dadgif2}/> </div>
+                        <div class="swiper-slide"> <img className="style-dad-gif" src={dadgif1}/> </div>
                         <div class="swiper-slide"> <img className="style-dad-gif" src={dadgif4}/> </div>
                     </div>
                     
@@ -96,14 +93,14 @@ const Dashboard = ({dadImages}) => {
 
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"> <img className="style-dad-gif" src={dadgif5}/> </div>
-                        <div class="swiper-slide"> <img className="style-dad-gif" src={dadgif8}/> </div>
                         <div class="swiper-slide"> <img className="style-dad-gif" src={dadgif6}/> </div>
+                        <div class="swiper-slide"> <img className="style-dad-gif" src={dadgif8}/> </div>
                         <div class="swiper-slide"> <img className="style-dad-gif" src={dadgif7}/> </div>
+                        <div class="swiper-slide"> <img className="style-dad-gif" src={dadgif5}/> </div>
                     </div>
                     
                     <div class="swiper-pagination"></div>
-                    <button className="navigate-btn style-solo-btn" onClick={() => history.push(`/dashboard/image-jokes`)}> Explore More Dad Gifs :) </button>
+                    <button className="navigate-btn style-solo-btn btn-two" onClick={() => history.push(`/dashboard/image-jokes`)}> More Dad Gifs :) </button>
                 </div>
 
 
