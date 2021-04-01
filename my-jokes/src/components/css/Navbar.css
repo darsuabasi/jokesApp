@@ -3,23 +3,38 @@
     margin: 0;
 }
 
+:root {
+    --blizzyBlack: #000;
+    --glowGrapefruit: #f3645e;
+    --mintGreen: #e0f5f4;
+    --icyBlue: #8298d5;
+    --glowyPeach: #f9b28e;
+    --tizzyTan: #e6e3de;
+    --whiteScale: rgba(255, 255, 255, 0.76);
+    --pureWhite: #ffffff;
+    --shadowColor: rgba(0, 0, 0, .2);
+    --shadowColorTwo: rgba(255, 255, 255, .5);
+}
+
 .navbar-main-div {
     width: 100%;
     height: 15vh;
     background-image: url('../../assets/header4.png');
-    /* background-color: #c1a37f; */
-    /* background-color: tan; */
     background-size: cover;
     background-size: contain;
     background-size: 3%;
     justify-content: center;
     align-items: center;
+    font-variant: all-small-caps;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.54;
+    font-family: IBM Plex Mono,Lucida Console,Monaco,"monospace";
 }
 
 .navbar-main-div:hover {
     background-image: url('../../assets/header8.png');
-    /* background-size: cover; */
-    /* background-size: contain; */
     background-size: 100%;
     justify-content: center;
     align-items: center;
@@ -34,12 +49,12 @@
 .menu-icon {
     line-height: 60px;
     width: 100%;
-    background: #000;
+    background: var(--blizzyBlack);
     text-align: right;
     box-sizing: border-box;
     padding: 15px 24px;
     cursor: pointer;
-    color: #fff;
+    color: var(--pureWhite);
     display: none;
 }
 
@@ -48,7 +63,7 @@
     position: fixed;
     float: left;
     margin: 16px 46px;
-    color: #fff;
+    color: var(--pureWhite);
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 2px;
@@ -56,8 +71,6 @@
 
 .menu-div:hover {
     height: 15vh;
-    /* background-color: #e6e3de; */
-    /* background-color: #f3645e; */
 }
 
 .navbar-main-ul {
@@ -65,7 +78,7 @@
     list-style: none;
     background: rgba(0, 0, 0, 0);
     overflow: hidden;
-    color: #fff;
+    color: var(--pureWhite);
     padding: 0;
     text-align: right;
     margin: 0;
@@ -74,30 +87,29 @@
 }
 
 .navbar-sub-div.black ul {
-    background: #000;
+    background: var(--blizzyBlack);
 }
 
 .nav-item {
     display: inline-block;
     padding: 16px 40px;
-    color: #000;
+    color: var(--blizzyBlack);
 }
 
 .navlink-style {
-    color: #fff;
-    font-size: 26px;
-    font-weight: 600;
+    color: var(--pureWhite);
+    font-size: 38px;
     font-variant: all-petite-caps;
-    text-decoration: underline #8298d5;
+    text-decoration: none;
 }
 
 .navlink-style:hover {
-    color: #fff;
-    text-decoration: line-through #8298d5;
+    color: var(--pureWhite);
+    text-decoration: underline var(--icyBlue);
 }
 
 .logo-style {
-    color: #fff;
+    color: var(--pureWhite);
     font-size: 26px;
     font-weight: 600;
     font-variant: all-petite-caps;
@@ -105,8 +117,81 @@
 }
 
 .logo-style:hover {
-    color: #fff;
+    color: var(--pureWhite);
     text-decoration: none !important;
+}
+
+@media (max-width: 800px) {
+
+    .navbar-logo {
+        display: none;
+    }
+    .navlink-style {
+        font-size: 30px;
+    }
+
+    .navbar-main-div:hover {
+        background-image: url('../../assets/header8.png');
+        background-size: contain;
+        background-size: 300%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .navbar-logo {
+        display: none;
+    }
+    .navlink-style {
+        font-size: 22px;
+    }
+
+    .navbar-main-div:hover {
+        background-image: url('../../assets/header8.png');
+        background-size: contain;
+        background-size: 300%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .navbar-logo {
+        display: none;
+    }
+    
+    .navlink-style {
+        font-size: 16px;
+    }
+
+    .navbar-main-div:hover {
+        background-image: url('../../assets/header8.png');
+        background-size: contain;
+        background-size: 300%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .navbar-logo {
+        display: none;
+    }
+    .navlink-style {
+        font-size: 10px;
+    }
+
+    .navbar-main-div:hover {
+        background-image: url('../../assets/header8.png');
+        background-size: contain;
+        background-size: 500%;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 
