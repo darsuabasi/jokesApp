@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
+import './../css/Jokeresults.css';
 
 const JokeResults = () => {
     const history = useHistory();
@@ -62,21 +63,21 @@ const JokeResults = () => {
         const searchResult = () => {
             if(searchResults.length){
             return (    
-                <div style={{justifyContent:"center"}}> 
-                    <h1> Search Results </h1>  
-                    <h1 className="now-viewing" style={{textAlign:"center"}}>Now viewing {sessionStorage.term} jokes! </h1>
-                        <div className="backToFeed-btn-div">
-                            <button className="backToFeed-btn" onClick={()=> handleNavigation("searchTerm")}>Return to Search</button>
+                <div className="jokeresults-header-div" style={{justifyContent:"center"}}> 
+                    <h1 className="jokeresults-header"> Let's See The Results </h1>  
+                    <h1 className="now-viewing" style={{textAlign:"center"}}>Now viewing "{sessionStorage.term}" jokes </h1>
+                        <div className="backToSearch-btn-div">
+                            <button className="backToSearch-btn" onClick={()=> handleNavigation("searchTerm")}>Return to Search</button>
                         </div>
                 </div>
             ) 
             } else {
                 return (
-                    <div>
-                        <h1> Search Results </h1>
-                        <h1>There are no results for {sessionStorage.term}. Try searching for something else.</h1>
-                        <div className="backToFeed-btn-div">
-                            <button className="backToFeed-btn" onClick={()=> handleNavigation("searchTerm")}>Return to Search</button>
+                    <div className="non-jokeresults-header-div">
+                        <h1 className="non-jokeresults-header"> Search Results </h1>
+                        <h1 className="non-now-viewing" >There are no results for "{sessionStorage.term}". Try searching for something else.</h1>
+                        <div className="non-backToSearch-btn-div">
+                            <button className="non-backToSearch-btn" onClick={()=> handleNavigation("searchTerm")}>Return to Search</button>
                         </div>
                     </div>
                     
@@ -86,8 +87,8 @@ const JokeResults = () => {
 
         const displayJokesFromSearch = searchResults.map((joke, i) => {
             return (
-                <div key={i} className="resultsss">
-                    <p key={joke.id}> {joke.joke} </p>
+                <div key={i} className="results-card">
+                    <p className="result-text" key={joke.id}> {joke.joke} </p>
                 </div>
             );
         });
@@ -95,8 +96,8 @@ const JokeResults = () => {
     return (
         <div className="searchjokes-results-div">
             {searchResult()}
-            <div>
-                <div>
+            <div className="searchjokes-results-subdiv">
+                <div className="results-deck">
                     {displayJokesFromSearch}
                 </div>
             </div>
