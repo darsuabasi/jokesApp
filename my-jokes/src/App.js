@@ -6,7 +6,6 @@ import Dashboard from './components/Dashboard';
 import Navbar from './components/Navbar';
 import RandomJokes from './components/Jokes/RandomJokes';
 import TrendingGifs from './components/Jokes/TrendingGifs';
-import RandomJokeSlack from './components/Jokes/RandomJokeSlack';
 import SearchJokes from './components/Jokes/SearchJokes';
 import JokeResults from './components/Jokes/JokeResults';
 import imageData from './data/imageData.js';
