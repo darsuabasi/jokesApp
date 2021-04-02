@@ -1,5 +1,22 @@
 .App {
   text-align: center;
+  font-family: IBM Plex Mono,Lucida Console,Monaco,"monospace";
+  font-variant: all-petite-caps;
+  font-weight: 400;
+}
+
+:root {
+    --blizzyBlack: #000;
+    --glowGrapefruit: #f3645e;
+    --mintGreen: #e0f5f4;
+    --icyBlue: #8298d5;
+    --glowyPeach: #f9b28e;
+    --tizzyTan: #e6e3de;
+    --whiteScale: rgba(255, 255, 255, 0.76);
+    --pureWhite: #ffffff;
+    --shadowColor: rgba(0, 0, 0, .2);
+    --shadowColorTwo: rgba(255, 255, 255, .5);
+    --officialTan: tan;
 }
 
 .App-logo {
@@ -36,3 +53,4 @@
     transform: rotate(360deg);
   }
 }
+
