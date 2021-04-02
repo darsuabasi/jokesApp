@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import axios from "axios";
+import './../css/Searchjokes.css';
 
 const SearchJokes = () => {
 
@@ -58,7 +59,6 @@ const SearchJokes = () => {
 
     const handleSearch = (e) => {
         e.preventDefault();
-        debugger
         history.push(`/dashboard/search-jokes/results/${sessionStorage.term}`);
         sessionStorage.term = e.target.elements[0].value
     }
@@ -69,20 +69,22 @@ const SearchJokes = () => {
 
 
     return (
-        <div className="searcjokes-main-div">
+        <div className="searchjokes-main-div">
 
-            <div className="serachjokes-header-div">
-                <h1>
-                    Search Jokes Here!
+            <div className="searchjokes-header-div">
+                <h1 className="searchjokes-header">
+                    Care for some more jokes?
                 </h1>
             </div>
 
-            <div className="serachjokes-search-div">
+            <div className="searchjokes-search-div">
                 <form onSubmit={handleSearch}>
-                    <input list="hashtagit" className="user-nav-search" placeholder="Search for jokes" value={search} type="text" onChange={handleChange}/>
-                    {displaySuggestion()}
-                    {/* <button className="user-nav-search-btn" type="submit"> Search Tags </button> */}
+                    <input list="hashtagit" className="searchjokes-search" placeholder="Enter a keyword" value={search} type="text" onChange={handleChange}/>
                 </form>
+
+                <div className="suggestion-div">
+                    {displaySuggestion()}
+                </div>
             </div>
             
         </div>

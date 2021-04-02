@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0
+}
+
+.searchjokes-main-div {
+    height: 85vh;
+    background-color: var(--tizzyTan)
+}
+
+.searchjokes-header-div {
+    height: 20%;
+    padding-top: 3%;
+    margin-bottom: 3%;
+}
+
+.searchjokes-header{
+    font-variant: all-small-caps;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.54;
+    font-size: 60px;
+    font-family: IBM Plex Mono,Lucida Console,Monaco,"monospace";
+    margin-bottom: 1%;
+    color: var(--officialTan);
+}
+
+.searchjokes-search {
+    width: 30rem;
+    height: 3rem;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.54;
+    font-family: IBM Plex Mono,Lucida Console,Monaco,"monospace";
+    border: none !important;
+    border-radius: 0.5rem;
+    box-shadow: 1px 3px 5px 5px var(--officialTan);
+    margin-top: 2%;
+}
+
+.searchjokes-search:hover {
+    box-shadow: 1px 3px 10px 8px var(--officialTan);
+}
+
+
+@media (max-width: 700px) {
+    .searchjokes-header{
+        font-size: 40px;
+    }
+
+    .searchjokes-search {
+        width: 25rem;
+        height: 3rem;
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 450px) {
+    .searchjokes-header {
+        font-size: 44px;
+        height: 30%;
+        margin-bottom: 2%;
+        
+    }
+
+    .searchjokes-search {
+        width: 20rem;
+        height: 3rem;
+        padding: 10px;
+        font-size: 16px;
+        margin-top: 10%;
+    }
+}
+
+@media (max-width: 320px) {
+    .searchjokes-header {
+        font-size: 44px;
+        height: 30%;
+        margin-bottom: 2%;
+        
+    }
+
+    .searchjokes-search {
+        width: 15rem;
+        height: 3rem;
+        padding: 10px;
+        font-size: 16px;
+        margin-top: 20%;
+    }
+}
