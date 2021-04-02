@@ -38,6 +38,7 @@
     background-size: 100%;
     justify-content: center;
     align-items: center;
+    background-color: (--officialTan);   
 }
 
 .navbar-sub-div {
@@ -45,6 +46,11 @@
     width: 100%;
     line-height: 60px;
 }
+
+.navbar-main-div:hover .myLogoImg-one {
+    display: none; 
+}
+
 
 .menu-icon {
     line-height: 60px;
@@ -68,6 +74,7 @@
     font-size: 20px;
     letter-spacing: 2px;
 }
+
 
 .menu-div:hover {
     height: 15vh;
