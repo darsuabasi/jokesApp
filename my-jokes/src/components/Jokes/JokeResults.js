@@ -19,7 +19,6 @@ const JokeResults = () => {
                     }}
                 );
                 setSearchResults(res.data.results);
-                
             } catch(err) {
                 console.log(err);
                 }

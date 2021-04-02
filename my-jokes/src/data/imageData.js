@@ -1,4 +1,4 @@
-import landingPage from './../assets/landingPage.png';
+// import landingPage from './../assets/landingPage.png';
 import dadgif1 from './../assets/dad-gif1.gif';
 import dadgif2 from './../assets/dad-gif2.gif';
 import dadgif3 from './../assets/dad-gif3.gif';

@@ -16,8 +16,8 @@ const Navbar = () => {
                 </div>
                 <div class="navbar-logo">
                     <Link className="logo-style"  exact to="/">
-                        <img class="set-logo-img1" className="myLogoImg-one" style={{width: '200px', height: '180px', marginTop: "-24%"}} src={myLogo4} />
-                        {mainLogo && <img class="set-logo-img2" className="myLogoImg-two" style={{width: '200px', height: '180px', marginTop: "-24%"}} src={myLogoLetters} />}
+                        <img alt="main logo" class="set-logo-img1" className="myLogoImg-one" style={{width: '200px', height: '180px', marginTop: "-24%"}} src={myLogo4} />
+                        {mainLogo && <img alt="secondary logo" class="set-logo-img2" className="myLogoImg-two" style={{width: '200px', height: '180px', marginTop: "-24%"}} src={myLogoLetters} />}
                     </Link>
                 </div>
 

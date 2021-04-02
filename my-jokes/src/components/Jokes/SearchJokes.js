@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import axios from "axios";
 import './../css/Searchjokes.css';
 
 const SearchJokes = () => {
 
     const history = useHistory();
-    const term = useParams();
+    // const term = useParams();
     const [list, setList] = useState([]);
     const [suggestion, setSuggestion] = useState([]);
     const [search, setSearch] = useState("");

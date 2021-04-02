@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import { useHistory, useParams } from 'react-router-dom';
 import '../css/Randomjokes.css';
-import { GiphyFetch } from '@giphy/js-fetch-api';
-import { useQuery } from 'react-query';
+// import { useHistory, useParams } from 'react-router-dom';
+// import { GiphyFetch } from '@giphy/js-fetch-api';
 
 
 const RandomJokes = () => {
@@ -49,7 +48,7 @@ const RandomJokes = () => {
             return <p className="joke-para"> {randomJoke} </p>
         } else if(variant === "gif") {
             return (
-                <img className="style-gif-img" src={randomGif}/>
+                <img alt="random gif" className="style-gif-img" src={randomGif}/>
             )
         }
     }

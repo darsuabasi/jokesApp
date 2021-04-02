@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import './css/Dashboard.css';
@@ -6,7 +6,7 @@ import './css/Dashboard.css';
 import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
 
-import { imageData } from './../data/imageData.js'; 
+// import { imageData } from './../data/imageData.js'; 
 // first cube
 import dadgif1 from './../assets/dad-gif1.gif';
 import dadgif2 from './../assets/dad-gif2.gif';
@@ -49,7 +49,7 @@ const Dashboard = ({dadImages}) => {
             },
         });
         setMySwiper(mySwiper) 
-    }, [])
+    }, [mySwiper])
 
 
     return (
@@ -79,10 +79,10 @@ const Dashboard = ({dadImages}) => {
                             )
                         })} */}
 
-                        <div class="swiper-slide"> <img className="style-dad-gif" src={dadgif3}/> </div>
-                        <div class="swiper-slide"> <img className="style-dad-gif" src={dadgif2}/> </div>
-                        <div class="swiper-slide"> <img className="style-dad-gif" src={dadgif1}/> </div>
-                        <div class="swiper-slide"> <img className="style-dad-gif" src={dadgif4}/> </div>
+                        <div class="swiper-slide"> <img alt="dad gif" className="style-dad-gif" src={dadgif3}/> </div>
+                        <div class="swiper-slide"> <img alt="dad gif" className="style-dad-gif" src={dadgif2}/> </div>
+                        <div class="swiper-slide"> <img alt="dad gif" className="style-dad-gif" src={dadgif1}/> </div>
+                        <div class="swiper-slide"> <img alt="dad gif" className="style-dad-gif" src={dadgif4}/> </div>
                     </div>
                     
                     <div class="swiper-pagination"></div>
@@ -93,10 +93,10 @@ const Dashboard = ({dadImages}) => {
 
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"> <img className="style-dad-gif" src={dadgif6}/> </div>
-                        <div class="swiper-slide"> <img className="style-dad-gif" src={dadgif8}/> </div>
-                        <div class="swiper-slide"> <img className="style-dad-gif" src={dadgif7}/> </div>
-                        <div class="swiper-slide"> <img className="style-dad-gif" src={dadgif5}/> </div>
+                        <div class="swiper-slide"> <img alt="dad gif" className="style-dad-gif" src={dadgif6}/> </div>
+                        <div class="swiper-slide"> <img alt="dad gif" className="style-dad-gif" src={dadgif8}/> </div>
+                        <div class="swiper-slide"> <img alt="dad gif" className="style-dad-gif" src={dadgif7}/> </div>
+                        <div class="swiper-slide"> <img alt="dad gif" className="style-dad-gif" src={dadgif5}/> </div>
                     </div>
                     
                     <div class="swiper-pagination"></div>
@@ -108,10 +108,10 @@ const Dashboard = ({dadImages}) => {
 
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"> <img className="style-dad-gif" src={dadgif11}/> </div>
-                        <div class="swiper-slide"> <img className="style-dad-gif" src={dadgif9}/> </div>
-                        <div class="swiper-slide"> <img className="style-dad-gif" src={dadgif10}/> </div>
-                        <div class="swiper-slide"> <img className="style-dad-gif" src={dadgif12}/> </div>
+                        <div class="swiper-slide"> <img alt="dad gif" className="style-dad-gif" src={dadgif11}/> </div>
+                        <div class="swiper-slide"> <img alt="dad gif" className="style-dad-gif" src={dadgif9}/> </div>
+                        <div class="swiper-slide"> <img alt="dad gif" className="style-dad-gif" src={dadgif10}/> </div>
+                        <div class="swiper-slide"> <img alt="dad gif" className="style-dad-gif" src={dadgif12}/> </div>
                     </div>
                     
                     <div class="swiper-pagination"></div>

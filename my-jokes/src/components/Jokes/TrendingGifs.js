@@ -1,13 +1,10 @@
-import React, {useState, useEffect} from 'react';
-import axios from 'axios';
-import { useHistory, useParams } from 'react-router-dom';
+import React from 'react';
 import { useQuery } from "react-query";
 import './../css/Trendinggifs.css';
 import Spinner from '../Spinner';
 
 const TrendingGifs = () => {
-    const history = useHistory();
-    const [gifs, setGifs] = useState([]);
+
     let APIKEY = "iSplCwH6SvOi40KftTYY6f1pFsVYGbOo"; 
 
     const { isLoading, error, data: gifData, isFetching } = useQuery("repoData", () =>
@@ -30,7 +27,7 @@ const TrendingGifs = () => {
             return (
                     <>
                         <div>{isFetching ? <Spinner/> : ""}</div>
-                        <img className="singleGif" src={el.images.fixed_height.url} />
+                        <img alt="gifs" className="singleGif" src={el.images.fixed_height.url} />
                     </>
                 );
             });
