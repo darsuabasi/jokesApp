@@ -12,6 +12,7 @@ const RandomJokes = () => {
     // const { joke_id } = useParams(); didnt need it since we're keying id from api
     const [randomJoke, setRandomJoke] = useState([]);
     const [randomGif, setRandomGif] = useState([]);
+    const [variant, setVariant] = useState("joke")
 
 
     const getRandomJoke = async () => {
@@ -23,6 +24,7 @@ const RandomJokes = () => {
                 }}
             );
             setRandomJoke(res.data.joke)
+            setVariant("joke")
         } catch (err) {
             console.log(err)
         }
@@ -33,33 +35,24 @@ const RandomJokes = () => {
             debugger
             let res = await axios.get(`https://api.giphy.com/v1/gifs/random?api_key=${APIKEY}`);
             setRandomGif(res.data["data"].image_original_url);
+            setVariant("gif")
         } catch (err) {
             console.log(err)
         } 
     }
+    useEffect(() => {
+        getRandomJoke()
+    }, [])
 
-    useEffect(getRandomGif, getRandomJoke, [])
-
-    const gifOrJoke = (variant) => {
-        if(variant === "getRandomGif") {
-            console.log(<p className="joke-para"> {randomJoke} </p>)
-        } else {
+    const gifOrJoke = () => {
+        if(variant === "joke") {
+            return <p className="joke-para"> {randomJoke} </p>
+        } else if(variant === "gif") {
             return (
                 <img className="style-gif-img" src={randomGif}/>
             )
-                {/* <p className="joke-para"> {randomJoke} </p> */}
         }
     }
-
-    // const gifOrJoke = (onClick) => {
-    //     return onClick === getRandomGif ? <img src={randomGif}/>
-    //     : onClick === getRandomJoke ? <p className="joke-para"> {randomJoke} </p>
-    // }
-
-    // const gifOrJoke = () =>  {
-    //     return getRandomGif ? <img src={randomGif}/> : getRandomJoke ? <p className="joke-para"> {randomJoke} </p>
-    // }
-
 
     return (
         <div className="randomjoke-main-div">
@@ -79,9 +72,9 @@ const RandomJokes = () => {
                     </div>
 
                     <div className="joke-card-btn-div">
-                            <button variant="getRandomGif" onClick={getRandomGif} type="submit" className="style-joke-btns"> Random Gif </button>
-                            <button variant="getRandomJoke" onClick={getRandomJoke} type="submit" className="style-joke-btns2"> Random Joke </button>
-                            {/* <button type="submit" className="style-joke-btns"> Slack Version </button> */}
+                        <button variant="getRandomGif" onClick={getRandomGif} type="submit" className="style-joke-btns"> Random Gif </button>
+                        <button variant="getRandomJoke" onClick={getRandomJoke} type="submit" className="style-joke-btns2"> Random Joke </button>
+                        {/* <button type="submit" className="style-joke-btns"> Slack Version </button> */}
                     </div>
                 </div>
             </div>        
