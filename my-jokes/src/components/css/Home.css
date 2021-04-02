@@ -13,6 +13,7 @@
     width: 100vw;
     background-image: url('../../assets/landingPage.png');
     background-size: cover;
+    /* background-repeat: no-repeat; */
 }
 
 .enterWorldBtn {
@@ -20,14 +21,23 @@
     margin-right: 10%;
     height: 3rem;
     width: 350px;
-    border-radius: 1rem;
-    background-color: tan;
+    border-radius: 0.5rem;
+    /* background-color: tan; */
+    background-color: #c1a37f;
+    /* background-color: #e6e3de; */
     border: none;
-    box-shadow: 1px 3px 5px 5px #f3645e;
+    box-shadow: 1px 2px 5px 5px #f3645e;
     cursor: pointer;
+    font-size: 24px;
+
+
     font-variant: all-small-caps;
-    font-size: 20px;
-    font-weight: bolder;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.54;
+    font-family: IBM Plex Mono,Lucida Console,Monaco,"monospace";
+    color: #000;
 }
 
 .enterWorldBtn:hover {
@@ -35,18 +45,35 @@
     -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
     -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
     transition: all 0.4s ease 0s;
-    box-shadow: 1px 3px 5px 5px #8298d5;
+    box-shadow: 1px 2px 5px 5px #8298d5;
+    color: #fff;
+}
+
+@media (max-width: 1500px) and (min-width:1400px) {
+    .home-main-div {
+        background-size: 1450px 900px;
+        /* background-repeat: no-repeat; */
+    }    
+}
+
+@media (max-width: 1230px) and (min-width:701px) {
+    .home-main-div {
+        background-size: contain;
+        /* background-repeat: no-repeat; */
+    }    
 }
 
 @media (max-width: 700px) {
-    /* .home-main-div {
+    .home-main-div {
         justify-content: center !important;
         align-items: center !important;
-        background-size: contain !important;
-    } */
+    }
 
     .enterWorldBtn {
-        margin-top: 75% !important;
-        margin-right: 15% !important;
+        margin-top: 15% !important;
+        margin-right: 2% !important;
     }
-  }
+}
+
+
+  
