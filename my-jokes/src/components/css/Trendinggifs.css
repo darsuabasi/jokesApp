@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --blizzyBlack: #000;
+    --glowGrapefruit: #f3645e;
+    --mintGreen: #e0f5f4;
+    --icyBlue: #8298d5;
+    --glowyPeach: #f9b28e;
+    --tizzyTan: #e6e3de;
+    --whiteScale: rgba(255, 255, 255, 0.76);
+    --pureWhite: #ffffff;
+    --shadowColor: rgba(0, 0, 0, .2);
+    --shadowColorTwo: rgba(255, 255, 255, .5);
+    --officialTan: tan;
+}
+
+.main-trendinggifs {
+    height: 85vh;
+    overflow: hidden;
+    background-color: var(--tizzyTan);
+
+}
+
+.trendinggifs-leftdiv {
+    height: 80vh;
+    overflow-y: scroll;
+    margin-top: 1%;
+}
+
+.trendinggifs-header {
+    align-items: center;
+    font-variant: all-small-caps;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.54;
+    font-size: 30px;
+    font-family: IBM Plex Mono,Lucida Console,Monaco,"monospace";
+    margin-bottom: 1%;
+    color: var(--officialTan);
+}
+
+.trendinggifs-deck {
+    margin: auto;
+    display: grid;
+}
+
+.trendinggifs-card {
+    column-count: 5;
+    column-gap: 10px;
+}
+
+.singleGif {
+    width: 250px;
+    border-radius: 0.5rem;
+}
+
+@media (max-width: 1300px) {
+    .trendinggifs-card {
+        column-count: 4;
+        column-gap: 10px;
+    } 
+}
+
+@media (max-width: 1000px) {
+    .trendinggifs-card {
+        column-count: 3;
+        column-gap: 10px;
+    } 
+}
+
+@media (max-width: 800px) {
+    .trendinggifs-card {
+        column-count: 2;
+        column-gap: 10px;
+    } 
+}
+
+@media (max-width: 530px) {
+    .trendinggifs-card {
+        column-count: 1;
+        column-gap: 10px;
+    } 
+}
