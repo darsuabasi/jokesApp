@@ -66,9 +66,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 350px;
     width: 500px;
-    padding: 3%;
+    padding: 1.5%;
     border-radius: 0.5rem;
     box-shadow: 1px 1px 5px 10px var(--icyBlue);  
     background-color: var(--pureWhite);
@@ -81,7 +81,7 @@
 
 .joke-card-sub {
     height: 230px;
-    width: 350px;
+    width: 400px;
     padding: 5%;
     border-radius: 0.5rem;
     margin-top: 3%;
@@ -118,6 +118,13 @@
     line-height: 1.54;
     font-family: IBM Plex Mono,Lucida Console,Monaco,"monospace";
     color: var(--blizzyBlack);
+}
+
+.style-gif-img {
+    height: 200px !important;
+    width: 350px !important;
+    margin-top: -2.5%;
+    border-radius: 0.5rem !important;
 }
 
 /* .joke-json-div {
@@ -189,6 +196,13 @@
         margin-top: 3%;
         margin-bottom: 5%;
         background-color: lightgrey;
+    }
+
+    .style-gif-img {
+        height: 200px !important;
+        width: 220px !important;
+        margin-top: -2.5%;
+        border-radius: 0.5rem !important;
     }
 
     .style-joke-btns, .style-joke-btns2 {
