@@ -100,7 +100,7 @@ const Dashboard = ({dadImages}) => {
                     </div>
                     
                     <div class="swiper-pagination"></div>
-                    <button className="navigate-btn style-solo-btn btn-two" onClick={() => history.push(`/dashboard/image-jokes`)}> More Dad Gifs :) </button>
+                    <button className="navigate-btn style-solo-btn btn-two" onClick={() => history.push(`/dashboard/trending-gifs`)}> Trending Gifs :) </button>
                 </div>
 
 
