@@ -1,17 +1,21 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { useHistory, useParams } from 'react-router-dom';
-import '../css/Randomjokes.css'
+import '../css/Randomjokes.css';
+import { GiphyFetch } from '@giphy/js-fetch-api';
+import { useQuery } from 'react-query';
+
 
 const RandomJokes = () => {
+    let APIKEY = "iSplCwH6SvOi40KftTYY6f1pFsVYGbOo";
     // const history = useHistory();  going anywhere from this page??
     // const { joke_id } = useParams(); didnt need it since we're keying id from api
     const [randomJoke, setRandomJoke] = useState([]);
-    const [jokepicID, setJokePicID] = useState([]);
+    const [randomGif, setRandomGif] = useState([]);
+
 
     const getRandomJoke = async () => {
         try {
-            debugger
             let res = await axios.get(`https://icanhazdadjoke.com/`,
             {
                 headers: {
@@ -19,14 +23,42 @@ const RandomJokes = () => {
                 }}
             );
             setRandomJoke(res.data.joke)
-            // let res = await axios.get(`https://icanhazdadjoke.com/j/${joke_id}.png`);
-            setJokePicID(res.data.id)
         } catch (err) {
             console.log(err)
         }
     }
 
-    useEffect(getRandomJoke, [])
+    const getRandomGif = async () => {
+        try {
+            debugger
+            let res = await axios.get(`https://api.giphy.com/v1/gifs/random?api_key=${APIKEY}`);
+            setRandomGif(res.data["data"].image_original_url);
+        } catch (err) {
+            console.log(err)
+        } 
+    }
+
+    useEffect(getRandomGif, getRandomJoke, [])
+
+    const gifOrJoke = (variant) => {
+        if(variant === "getRandomGif") {
+            console.log(<p className="joke-para"> {randomJoke} </p>)
+        } else {
+            return (
+                <img className="style-gif-img" src={randomGif}/>
+            )
+                {/* <p className="joke-para"> {randomJoke} </p> */}
+        }
+    }
+
+    // const gifOrJoke = (onClick) => {
+    //     return onClick === getRandomGif ? <img src={randomGif}/>
+    //     : onClick === getRandomJoke ? <p className="joke-para"> {randomJoke} </p>
+    // }
+
+    // const gifOrJoke = () =>  {
+    //     return getRandomGif ? <img src={randomGif}/> : getRandomJoke ? <p className="joke-para"> {randomJoke} </p>
+    // }
 
 
     return (
@@ -37,33 +69,21 @@ const RandomJokes = () => {
                 </h1>
             </div>
 
-            {/* <div className="randomjoke-randomize-div"> 
-                <form onSubmit={getRandomJoke}>
-                    <button type="submit">
-                    Random Joke
-                    </button>
-                </form>
-            </div> */}
 
             <div className="randomjoke-display-div">
-                {/* text view */}
                 <div className="joke-card"> 
                     <div className="joke-card-sub"> 
-                        <p className="joke-para"> {randomJoke} </p>
+                        <div className="joke-json-div">
+                            {gifOrJoke()}
+                        </div>
                     </div>
 
                     <div className="joke-card-btn-div">
-                        {/* <form onSubmit={getRandomJoke}> */}
-                            <button type="submit" className="style-joke-btns"> Image </button>
-                            <button onClick={getRandomJoke} type="submit" className="style-joke-btns2"> Random Joke </button>
-                            <button type="submit" className="style-joke-btns"> Slack Version </button>
-                        {/* </form>  */}
-
+                            <button variant="getRandomGif" onClick={getRandomGif} type="submit" className="style-joke-btns"> Random Gif </button>
+                            <button variant="getRandomJoke" onClick={getRandomJoke} type="submit" className="style-joke-btns2"> Random Joke </button>
+                            {/* <button type="submit" className="style-joke-btns"> Slack Version </button> */}
                     </div>
                 </div>
-
-                {/* image view */}
-                {/* <img src={`https://icanhazdadjoke.com/j/${jokepicID}.png`}/> */}
             </div>        
         </div>
     )

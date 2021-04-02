@@ -5,55 +5,69 @@ import Home from './components/Home';
 import Dashboard from './components/Dashboard';
 import Navbar from './components/Navbar';
 import RandomJokes from './components/Jokes/RandomJokes';
-import ImageJokes from './components/Jokes/ImageJokes';
+import TrendingGifs from './components/Jokes/TrendingGifs';
 import RandomJokeSlack from './components/Jokes/RandomJokeSlack';
 import SearchJokes from './components/Jokes/SearchJokes';
 import JokeResults from './components/Jokes/JokeResults';
 import imageData from './data/imageData.js';
+import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
+
 
 const App = () => {
+
+  const queryClient = new QueryClient()
+
   return (
     <div className="App">
-      <BrowserRouter>
-        <Switch>
-          <Route exact path={"/"}>
-              <Home/>
-          </Route>
+      <QueryClientProvider client={queryClient}> 
+        <BrowserRouter>
+          <Switch>
+            <Route exact path={"/"}>
+                <Home/>
+            </Route>
 
-            <div className="sub-app">
-              <Navbar/> 
+              <div className="sub-app">
+                <Navbar/> 
 
-              <Switch>
-                <Route exact path={"/dashboard"}>
-                  {/* dont need to pass ass prop anymore since adding manually due to 3 cubes*/}
-                  <Dashboard dadImages={imageData}/>
-                </Route>
+                <Switch>
+                  <Route exact path={"/dashboard"}>
+                    {/* dont need to pass ass prop anymore since adding manually due to 3 cubes*/}
+                    <Dashboard dadImages={imageData}/>
+                  </Route>
 
-                <Route exact path={"/dashboard/random-jokes"}>
-                  <RandomJokes/>
-                </Route>
+                  <Route exact path={"/dashboard/random-jokes"}>
+                    <RandomJokes/>
+                  </Route>
 
-                {/* <Route exact path={"/dashboard/image-jokes"}>
-                  <ImageJokes/>
-                </Route> */}
+                  <Route exact path={"/dashboard/trending-gifs"}>
+                    <TrendingGifs/>
+                  </Route>
 
-                {/* <Route exact path={"/dashboard/slack-random-jokes"}>
-                  <RandomJokeSlack/>
-                </Route> */}
+                  <Route exact path={"/dashboard/search-jokes"}>
+                    <SearchJokes/>
+                  </Route>
 
-                <Route exact path={"/dashboard/search-jokes"}>
-                  <SearchJokes/>
-                </Route>
-
-                <Route exact path="/dashboard/search-jokes/results/:sessionStorage">
-                  <JokeResults/>
-                </Route>
-              </Switch>
-            </div>
-        </Switch>
-      </BrowserRouter>
+                  <Route exact path="/dashboard/search-jokes/results/:sessionStorage">
+                    <JokeResults/>
+                  </Route>
+                </Switch>
+              </div>
+          </Switch>
+        </BrowserRouter>
+      </QueryClientProvider>
     </div>
   )
 }
 
 export default App;
+
+
+
+
+
+// https://github.com/darsuabasi/jokesApp.git
+
+
+
+
+
