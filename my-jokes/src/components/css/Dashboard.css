@@ -40,10 +40,10 @@
 }
 
 .cube-main-div {
-  /* display: flex;
-  flex-direction: row; */
-  display: grid !important;
-  grid-template-columns: 1fr 1fr 1fr !important;
+  /* display: grid !important; */
+  /* grid-template-columns: 1fr 1fr 1fr !important; */
+  display: flex;
+  flex-direction: row;
   height: 70vh !important;
   align-items: center !important;
   justify-content: center !important;
@@ -52,8 +52,6 @@
 .swiper-container {
   width: 400px;
   height: 350px;
-  position: absolute;
-  margin-left: -150px;
   margin-top: -90px;
 }
 
@@ -131,13 +129,12 @@
       align-items: center;
       height: 100%;
       flex-direction: column;
+      margin-top: 45%;
   }
 
     .swiper-container {
       width: 600px;
       height: 450px;
-      position: absolute;
-      margin-left: -150px;
       margin-top: -5px;
       margin-bottom: 4%;
   }
@@ -176,13 +173,12 @@
       align-items: center;
       height: 100%;
       flex-direction: column;
+      margin-top: 55%;
   }
 
     .swiper-container {
       width: 350px;
       height: 300px;
-      position: absolute;
-      margin-left: -150px;
       margin-top: -5px;
       margin-bottom: 4%;
   }
@@ -212,13 +208,12 @@
       align-items: center;
       height: 100%;
       flex-direction: column;
+      margin-top: 70%;
   }
 
     .swiper-container {
       width: 350px;
       height: 300px;
-      position: absolute;
-      margin-left: -150px;
       margin-top: -3px;
       margin-bottom: 4%;
   }
@@ -248,13 +243,12 @@
       align-items: center;
       height: 100%;
       flex-direction: column;
+      margin-top: 60%;
   }
 
     .swiper-container {
       width: 250px;
       height: 250px;
-      position: absolute;
-      margin-left: -150px;
       margin-top: -5px;
       margin-bottom: 4%;
   }
