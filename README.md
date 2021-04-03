@@ -1,6 +1,6 @@
 # UEA-DJ - [Mini Take-home Project] 
 ## Live Site: https://laugh-with-me.netlify.app/ 
-### UEA-DJ is an interactive Frontend Applicatioon where visitors of the site can access random dad jokes and gifs. Users can also search for different jokes based on tags. 
+### UEA-DJ is an interactive Frontend Application where visitors of the site can access random dad jokes and gifs. Users can also search for different jokes based on tags. 
 
 Best viewed on Web.
 
