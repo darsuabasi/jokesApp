@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import Home from './components/Home';
@@ -9,7 +8,8 @@ import TrendingGifs from './components/Jokes/TrendingGifs';
 import SearchJokes from './components/Jokes/SearchJokes';
 import JokeResults from './components/Jokes/JokeResults';
 import imageData from './data/imageData.js';
-import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
+import Error from './components/Error';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 
 const App = () => {
@@ -48,6 +48,10 @@ const App = () => {
 
                   <Route exact path="/dashboard/search-jokes/results/:sessionStorage">
                     <JokeResults/>
+                  </Route>
+
+                  <Route exact path={"*"}>
+                    <Error/>
                   </Route>
                 </Switch>
               </div>
