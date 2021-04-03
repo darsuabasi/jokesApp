@@ -93,11 +93,13 @@
 }
 
 .navigate-btn:hover {
-  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  /* text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
   -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
   -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-  transition: all 0.4s ease 0s;
-  box-shadow: 1px 2px 10px 5px var(icyBlue);
+  transition: all 0.4s ease 0s; */
+  box-shadow: 1px 2px 10px 5px var(--glowGrapefruit);
+  color: var(--pureWhite);
+  cursor: pointer;
 }
 
 .style-solo-btn {
@@ -146,9 +148,7 @@
   .style-solo-btn {
     display: none !important;
   }
-    
 }
-
 
 
 @media (max-width: 700px) {

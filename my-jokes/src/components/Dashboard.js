@@ -49,7 +49,7 @@ const Dashboard = ({dadImages}) => {
             },
         });
         setMySwiper(mySwiper) 
-    }, [mySwiper])
+    }, [])
 
 
     return (
