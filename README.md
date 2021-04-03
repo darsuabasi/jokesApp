@@ -6,14 +6,17 @@ Best viewed on Web.
 
 Built with React.js.
 
-### Lifetrest: Landing Page
+### LaughWithMe: Landing Page
 <img src="readmeImages/landingPage.png" width="850px">
 
-### Lifetrest: Dashboard
-<img src="readmeImages/dashboard.png" width="850px">
+### LaughWithMe: Dashboard
+<img src="readmeImages/dashboard.gif" width="850px">
 
-### Lifetrest: Gif or Joke 
-<img src="readmeImages/giforjoke.png" width="850px">
+### LaughWithMe: Search 
+<img src="readmeImages/searchJokes.gif" width="850px">
+
+### LaughWithMe: Error Page 
+<img src="readmeImages/errorPage.png" width="850px">
 
 
 ## Features
