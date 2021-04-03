@@ -13,7 +13,6 @@
     width: 100vw;
     background-image: url('../../assets/landingPage.png');
     background-size: cover;
-    /* background-repeat: no-repeat; */
 }
 
 .enterWorldBtn {
@@ -29,8 +28,6 @@
     box-shadow: 1px 2px 5px 5px #f3645e;
     cursor: pointer;
     font-size: 24px;
-
-
     font-variant: all-small-caps;
     font-weight: 400;
     font-stretch: normal;
@@ -52,14 +49,12 @@
 @media (max-width: 1500px) and (min-width:1400px) {
     .home-main-div {
         background-size: 1450px 900px;
-        /* background-repeat: no-repeat; */
     }    
 }
 
 @media (max-width: 1230px) and (min-width:701px) {
     .home-main-div {
         background-size: contain;
-        /* background-repeat: no-repeat; */
     }    
 }
 
