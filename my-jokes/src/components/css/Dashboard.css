@@ -40,11 +40,13 @@
 }
 
 .cube-main-div {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  flex-direction: row; */
   align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   height: 70vh;
-  flex-direction: row;
 }
 
 .swiper-container {
