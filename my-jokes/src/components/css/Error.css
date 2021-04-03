@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0
+}
+
+.errorHandlingMain {
+    background-image: url('../../assets/errorBG2.png');
+    background-size: 100% !important;
+    height: 85vh !important;
+    width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subOneError {
+    width: 44rem;
+    width: 500px;
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+.subDivForError {
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 1rem; */
+    text-align: center;
+}
+
+.message {
+    padding: 2%;
+    font-size: 18px !important;
+}
+
+.typingBody {
+    width: 40rem;
+    justify-content: center;
+    align-items: center;
+    color: teal;
+    font-size: 20px !important;
+    text-align: center
+}
+
+.errBtn {
+    margin-top: 5%;
+    margin-right: 10%;
+    height: 2.5rem;
+    width: 150px;
+    border-radius: 0.5rem;
+    background-color: #c1a37f;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    font-variant: all-small-caps;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.54;
+    font-family: IBM Plex Mono,Lucida Console,Monaco,"monospace";
+
+    box-shadow: 1px 2px 5px 5px #8298d5;
+    color: #fff;
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+
+}
+
+.errBtn:hover {
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+    box-shadow: 1px 2px 5px 5px #f3645e;
+    color: #fff;
+}
+
